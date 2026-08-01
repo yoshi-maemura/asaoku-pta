@@ -139,6 +139,33 @@
   }
   .qr-slot img { width: 100%; height: 100%; }
 
+  /* ---------- 企画した委員の言葉（抜粋・全文は omoi.html） ----------
+     LP全体が長いため、本文には心に残る2文だけを置き、全文は別ページへ逃がす。
+     事務的な表・箇条書きと質感を変え、「人の言葉」だと一目でわかるようにする。 */
+  .letter-teaser {
+    background: #fffdf8; border: 1px solid #e6dcc4; border-left: 6px solid var(--amber);
+    border-radius: 12px; padding: 20px 24px 18px; margin: 30px 0 6px;
+  }
+  .letter-teaser .lt-lead {
+    font-size: 13px; font-weight: 800; color: #7a5c1e;
+    letter-spacing: 0.08em; margin-bottom: 10px;
+  }
+  .letter-teaser p {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+    font-size: 16px; line-height: 2.0; color: #3b3529; margin-bottom: 12px;
+  }
+  .letter-teaser .hl {
+    background: linear-gradient(transparent 62%, #fbe9c0 62%); font-weight: 600;
+  }
+  .letter-teaser .lt-more {
+    display: inline-block; color: #7a5c1e; font-weight: 700; font-size: 14px;
+    text-decoration: none; border-bottom: 1.5px solid var(--amber); padding-bottom: 2px;
+  }
+  @media (max-width: 600px) {
+    .letter-teaser { padding: 17px 16px 15px; }
+    .letter-teaser p { font-size: 15px; line-height: 1.95; }
+  }
+
   /* ---------- 表 ---------- */
   table { border-collapse: collapse; width: 100%; font-size: 14px; }
   th, td { border: 1px solid var(--line); padding: 9px 12px; text-align: left; vertical-align: top; line-height: 1.7; }
@@ -414,6 +441,14 @@
       <p class="note" style="margin-top:6px;">参考: 本議案は、会則第7条5項に定める総会審議事項のうち「(2) 事業計画ならびに事業報告に関する事項」（講演会の開催）と「(3) 予算、決算ならびに会計の監査に関する事項」（支出の上限・財源・特別区分の設置）に当たります。</p>
     </div>
   </section>
+
+  <!-- 企画した委員の思い（抜粋のみ・全文は別ページ omoi.html） -->
+  <div class="letter-teaser">
+    <div class="lt-lead">この企画を始めた、成人委員の言葉</div>
+    <p>「ぜひこの感動を麻生区の保護者の皆さんにも届けたい」<br>
+    <span class="hl">私自身も、子育てに疲れ切っていたときに木山さんの講演会を聴き、とても前向きな気持ちになれた経験があります。</span></p>
+    <a class="lt-more" href="omoi.html" target="_blank" rel="noopener">成人委員の思いを読む（全文・別画面で開きます）</a>
+  </div>
 
   <!-- 議案書 -->
   <section id="gian">

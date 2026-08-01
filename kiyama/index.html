@@ -17,7 +17,8 @@
     color: var(--ink); background: var(--bg); line-height: 1.85; font-size: 16px;
     -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
-  img { max-width: 100%; display: block; }
+  /* height属性が付いた画像でも縦横比が崩れないよう、高さは常に自動算出させる */
+  img { max-width: 100%; height: auto; display: block; }
   .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
 
   .topbar {
@@ -242,7 +243,7 @@
         <div class="from">令和8年7月吉日　麻生区PTA協議会　会長　前村 嘉昭</div>
       </div>
       <div class="hero-photo">
-        <img src="assets/kiyama_portrait.jpg" alt="木山裕策氏">
+        <img src="assets/kiyama_portrait_v2.jpg" alt="木山裕策氏">
         <div class="cap-w">木山裕策氏<br>木山裕策オフィシャルページより引用　https://yusakukiyama.com/biography/</div>
       </div>
     </div>
@@ -356,7 +357,7 @@
       </div>
       <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
         <a class="btn btn-pdf" href="kikaku-setsumei.pdf" download>📄 企画説明資料PDF</a>
-        <a class="btn btn-pdf" href="03-04_臨時総会資料_A4版.pdf" download>📄 臨時総会 議案書・招集通知PDF</a>
+        <a class="btn btn-pdf" href="rinji-sokai-shiryo.pdf" download>📄 臨時総会 議案書・招集通知PDF</a>
       </div>
     </div>
   </section>
@@ -491,7 +492,7 @@
     <div class="fbtns">
       <a class="btn btn-main small" href="#agenda">お諮りする3点へ戻る</a>
       <a class="btn btn-pdf" style="padding:9px 18px; font-size:13px;" href="kikaku-setsumei.pdf" download>📄 企画説明資料PDF</a>
-      <a class="btn btn-pdf" style="padding:9px 18px; font-size:13px;" href="03-04_臨時総会資料_A4版.pdf" download>📄 臨時総会 議案書・招集通知PDF</a>
+      <a class="btn btn-pdf" style="padding:9px 18px; font-size:13px;" href="rinji-sokai-shiryo.pdf" download>📄 臨時総会 議案書・招集通知PDF</a>
     </div>
     麻生区PTA協議会　臨時運営委員会 資料｜令和8年7月吉日<br>
     お問い合わせ: 麻生区PTA協議会 事務局（asao.ku.pta.00@gmail.com）

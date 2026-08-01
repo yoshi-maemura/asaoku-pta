@@ -66,6 +66,18 @@
     border-radius: 999px; padding: 6px 16px; font-size: 13px; font-weight: 600;
   }
   .badge.strong { background: var(--amber); border-color: var(--amber); color: #16304f; font-weight: 800; }
+  .nav-chips { margin: 22px 0; }
+  .nav-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .nav-label { font-size: 12px; font-weight: 700; opacity: 0.78; letter-spacing: 0.05em; margin: 12px 0 6px; }
+  .nav-chip {
+    display: inline-block; text-decoration: none; color: #fff;
+    background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 600;
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav-chip .n { color: var(--amber); font-weight: 800; margin-right: 5px; }
+  .nav-chip:hover { background: var(--amber); color: #16304f; }
+  .nav-chip:hover .n { color: #16304f; }
   .hero .cta-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 26px; }
   .hero .from { margin-top: 26px; font-size: 13px; opacity: 0.8; }
   .hero-grid { display: flex; gap: 34px; align-items: center; flex-wrap: wrap; }
@@ -206,16 +218,26 @@
     <div class="hero-grid">
       <div class="hero-main">
         <div class="org">麻生区PTA協議会　臨時運営委員会 資料</div>
-        <h1>教育講演ミニライブ<span class="accent">（講師: 木山裕策氏）</span><br>企画の承認依頼</h1>
+        <h1>教育講演ミニライブ<br><span class="accent">（講師: 木山裕策氏）</span><br>企画の承認依頼</h1>
         <div class="sub">本日は、成人教育活動として、運営委員のみなさんの声から生まれた教育講演会について、ご説明します。まず運営委員会にお諮りしたい内容のポイント・結論からお伝えし、詳しい背景などは後半にまとめました。</div>
-        <div class="badges">
-          <span class="badge strong">お諮りしたいこと 3点</span>
-          <span class="badge">支出見込額 約38万円</span>
-          <span class="badge">会費の金額への影響なし</span>
-        </div>
+        <nav class="nav-chips" aria-label="目次">
+          <div class="nav-row">
+            <a class="nav-chip" href="#agenda"><span class="n">1</span>お諮りしたいこと（3点）</a>
+            <a class="nav-chip" href="#overview"><span class="n">2</span>本企画の概要</a>
+            <a class="nav-chip" href="#why"><span class="n">3</span>なぜこの企画か</a>
+            <a class="nav-chip" href="#audience"><span class="n">4</span>参加対象</a>
+            <a class="nav-chip" href="#schedule"><span class="n">5</span>スケジュール</a>
+          </div>
+          <div class="nav-label">補足（詳しく知りたい方向け）</div>
+          <div class="nav-row">
+            <a class="nav-chip" href="#background"><span class="n">6</span>企画の趣旨</a>
+            <a class="nav-chip" href="#speaker"><span class="n">7</span>講師紹介</a>
+            <a class="nav-chip" href="#budget"><span class="n">8</span>収支計画</a>
+            <a class="nav-chip" href="#partnership"><span class="n">9</span>協賛・共催</a>
+          </div>
+        </nav>
         <div class="cta-row">
-          <a class="btn btn-main" href="#agenda">お諮りする3点を見る</a>
-          <a class="btn btn-pdf on-dark" href="kikaku-setsumei.pdf" download>📄 PDF版をダウンロード（印刷用）</a>
+          <a class="btn btn-pdf on-dark" href="kikaku-setsumei.pdf" target="_blank" rel="noopener">📄 PDFで内容を確認する（印刷用）</a>
         </div>
         <div class="from">令和8年7月吉日　麻生区PTA協議会　会長　前村 嘉昭</div>
       </div>
@@ -263,7 +285,7 @@
       <table>
         <tr><td class="k">講師</td><td>木山裕策 氏（歌手・「home」・NHK紅白歌合戦出場）</td></tr>
         <tr><td class="k">内容</td><td>講演（約60分）＋ミニライブ（約30分）</td></tr>
-        <tr><td class="k">日時候補</td><td>2026（令和8）年度後半で調整（2月は受験期のため避けます）</td></tr>
+        <tr><td class="k">日時候補</td><td>12月を予定</td></tr>
         <tr><td class="k">会場候補</td><td>川崎市アートセンター（新百合ヶ丘）を検討中</td></tr>
         <tr><td class="k">対象</td><td>区内PTA会員を優先しつつ、広く地域にも公開</td></tr>
         <tr><td class="k">想定参加人数</td><td>約200名（確保できた会場にもよります。）</td></tr>
@@ -315,14 +337,14 @@
   <section id="schedule">
     <div class="sec-head"><span class="no">5</span><h2>進め方とスケジュール</h2><span class="en">SCHEDULE</span></div>
     <div class="card">
-      <p class="note" style="margin-bottom:14px;">※講演会を12月〜1月の開催と仮置きでの日程です。開催日程の決定後に最終確定します。</p>
+      <p class="note" style="margin-bottom:14px;">※講演会を12月開催の予定での日程です。開催日程の決定後に最終確定します。</p>
       <div class="tl">
         <div class="tl-row"><div class="tl-when">7月中〜</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-what"><span class="big">臨時運営委員会（本日）</span>で企画と議案をご審議いただき、臨時総会の招集を決定</div></div>
         <div class="tl-row"><div class="tl-when">8月上旬</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-what">臨時総会の招集通知を発送（書面議決）</div></div>
         <div class="tl-row"><div class="tl-when">8月中旬〜</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-what">総会可決後: 講師への正式依頼・契約／共催・協賛・寄付の正式依頼・募集開始</div></div>
         <div class="tl-row"><div class="tl-when">10月</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-what">後援名義申請の完了（広報開始の1か月前までが申請期限・審査2〜3週間）</div></div>
         <div class="tl-row"><div class="tl-when">11月</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-what">広報開始・チラシ配布・参加申込の受付</div></div>
-        <div class="tl-row"><div class="tl-when">12月〜1月</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-what"><span class="big">講演会当日</span></div></div>
+        <div class="tl-row"><div class="tl-when">12月</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-what"><span class="big">講演会当日</span></div></div>
         <div class="tl-row"><div class="tl-when">開催後2ヶ月以内</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-what">収支報告／協賛いただいた方への御礼とご報告</div></div>
       </div>
     </div>
@@ -334,7 +356,7 @@
       </div>
       <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
         <a class="btn btn-pdf" href="kikaku-setsumei.pdf" download>📄 企画説明資料PDF</a>
-        <a class="btn btn-pdf" href="rinji-sokai-shiryo.pdf" download>📄 臨時総会 議案書・招集通知PDF</a>
+        <a class="btn btn-pdf" href="03-04_臨時総会資料_A4版.pdf" download>📄 臨時総会 議案書・招集通知PDF</a>
       </div>
     </div>
   </section>
@@ -413,7 +435,7 @@
       <div class="tbl-scroll">
       <table>
         <tr><th>費目</th><th>金額</th><th>備考</th></tr>
-        <tr><td>講演料</td><td>約27万円</td><td>先方からPTAの非営利活動であることや社会的意義を踏まえて、通常の講演料から値引きのご回答をいただいた実額です（23万円＋消費税＋交通費）</td></tr>
+        <tr><td>講演料</td><td>約27万円</td><td>教育目的・PTA主催であることをお伝えしてご相談したところ、通常の講演料から値引きのご回答をいただいた実額です（23万円＋消費税＋交通費）</td></tr>
         <tr><td>会場費</td><td>約2万円</td><td>アートセンター使用料約1.5万円＋附帯設備費見込み</td></tr>
         <tr><td>チラシ作成・印刷費</td><td>約7万円</td><td>昨年度成人教育委員会実績5.3万円。デジタル配信を併用しますが、配布枚数が増えることからこの金額としています</td></tr>
         <tr><td>雑費</td><td>約2万円</td><td>その他、備品購入・運営に関わる費用として</td></tr>
@@ -469,7 +491,7 @@
     <div class="fbtns">
       <a class="btn btn-main small" href="#agenda">お諮りする3点へ戻る</a>
       <a class="btn btn-pdf" style="padding:9px 18px; font-size:13px;" href="kikaku-setsumei.pdf" download>📄 企画説明資料PDF</a>
-      <a class="btn btn-pdf" style="padding:9px 18px; font-size:13px;" href="rinji-sokai-shiryo.pdf" download>📄 臨時総会 議案書・招集通知PDF</a>
+      <a class="btn btn-pdf" style="padding:9px 18px; font-size:13px;" href="03-04_臨時総会資料_A4版.pdf" download>📄 臨時総会 議案書・招集通知PDF</a>
     </div>
     麻生区PTA協議会　臨時運営委員会 資料｜令和8年7月吉日<br>
     お問い合わせ: 麻生区PTA協議会 事務局（asao.ku.pta.00@gmail.com）
